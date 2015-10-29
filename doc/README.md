@@ -24,4 +24,9 @@ password=60232362720
 
 ##Command Record
 php app/console doctrine:database:create
+composer require doctrine/doctrine-migrations-bundle "^1.0"
+php app/console doctrine:generate:entity
+app/console doctrine:migrations:status
+app/console doctrine:migrations:diff
+app/console doctrine:migrations:migrate
 
