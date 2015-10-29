@@ -23,9 +23,13 @@ password=60232362720
 ```
 
 ##Command Record
+http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
+php app/console generate:bundle
+
 php app/console doctrine:database:create
 composer require doctrine/doctrine-migrations-bundle "^1.0"
 php app/console doctrine:generate:entity
+https://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
 app/console doctrine:migrations:status
 app/console doctrine:migrations:diff
 app/console doctrine:migrations:migrate
