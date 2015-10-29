@@ -1,3 +1,7 @@
+myxhop_web:
+    resource: "@MyxhopWebBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

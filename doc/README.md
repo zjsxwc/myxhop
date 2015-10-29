@@ -21,3 +21,7 @@ $ sudo cat /root/.my.cnf
 password=60232362720
 
 ```
+
+##Command Record
+php app/console doctrine:database:create
+
