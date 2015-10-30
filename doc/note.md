@@ -55,3 +55,6 @@ UPDATE  `user` SET  `password` =  '$2y$12$5eDlJeClub1ExowPBVtPo.1eZPjdxwtBOyTCpA
 UPDATE  `user` SET  `password` =  '$2y$12$5eDlJeClub1ExowPBVtPo.1eZPjdxwtBOyTCpAcBhlAXVfUBu4BNm',
 `roles` =  'a:2:{i:0;s:9:"ROLE_USEE";i:1;s:9:"ROLE_USER";}' WHERE  `user`.`id` =3 LIMIT 1
 
+INSERT INTO `user` (`name`, `password`, `roles`) VALUES ('wc', '$2y$12$5eDlJeClub1ExowPBVtPo.1eZPjdxwtBOyTCpAcBhlAXVfUBu4BNm','a:2:{i:0;s:9:"ROLE_USEE";i:1;s:9:"ROLE_USER";}');
+
+
