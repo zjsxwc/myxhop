@@ -43,9 +43,7 @@ class WebCurrentUserProvider implements UserProviderInterface
 
         if ($userData) {
             $password = $userData->getPassword();
-//            $roles = unserialize($userData->getRoles());
-            $roles = ['ROLE_USER'];
-
+            $roles = unserialize($userData->getRoles());
             return new WebCurrentUser($username, $password, $roles);
         }
 
