@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MyxhopWebBundle:User:login{% endblock %}
+
+{% block body %}
+<h1>Welcome to the User:login page</h1>
+    {% if error %}
+        <span>{{ error.message }}</span>
+    {% endif %}
+    <form method="post" action="{{ path('myxhop_web_login_check') }}">
+        <input type="text" name="_username" placeholder='name' />
+        <input type="password" name="_password" placeholder='password'/>
+        <input type="submit" />
+    </form>
+{% endblock %}
