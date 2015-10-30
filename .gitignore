@@ -11,5 +11,8 @@
 /web/bundles/
 .idea
 idea/*
+*.DS_Store*
+/app/console
+/myxhop.iml
 !.gitignore
 *___jb_old___
