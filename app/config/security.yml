@@ -35,7 +35,10 @@ security:
                 login_path: myxhop_web_login
                 check_path: myxhop_web_login_check
 
+            logout:
+                path: myxhop_web_logout
+
 
     access_control:
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/(login|logout)$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: ROLE_USER }

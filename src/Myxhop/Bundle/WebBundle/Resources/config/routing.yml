@@ -8,3 +8,6 @@ myxhop_web_login:
 
 myxhop_web_login_check:
     path:     /login_check
+
+myxhop_web_logout:
+    path:     /logout
