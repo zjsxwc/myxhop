@@ -49,6 +49,13 @@ class User
      */
     private $phone;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="roles", type="string", length=255)
+     */
+    private $roles;
+
 
     /**
      * Get id
@@ -154,6 +161,30 @@ class User
     public function getPhone()
     {
         return $this->phone;
+    }
+
+    /**
+     * Set roles
+     *
+     * @param string $roles
+     *
+     * @return User
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Get roles
+     *
+     * @return string
+     */
+    public function getRoles()
+    {
+        return $this->roles;
     }
 }
 

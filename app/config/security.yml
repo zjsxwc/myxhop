@@ -1,11 +1,16 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
+    encoders:
+        Myxhop\Bundle\WebBundle\Security\WebCurrentUser:
+            algorithm:  bcrypt
+            cost:       13
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory: ~
+        web_user_provider:
+                id: web_user_provider_service
+
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -13,7 +18,8 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        main:
+        web:
+            pattern:   ^/web/.*$
             anonymous: ~
             # activate different ways to authenticate
 
@@ -22,3 +28,14 @@ security:
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+            simple_form:
+                authenticator: web_user_authenticator
+                provider: web_user_provider
+                login_path: myxhop_web_login
+                check_path: myxhop_web_login_check
+
+
+    access_control:
+        - { path: ^/web/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/web/, roles: ROLE_USER }

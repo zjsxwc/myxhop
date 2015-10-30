@@ -42,3 +42,10 @@ app/console doctrine:migrations:diff
 
 app/console doctrine:migrations:migrate
 
+Test User:
+
+tester tester
+
+UPDATE  `user` SET  `name` =  'tester',
+`password` =  '$2y$12$5eDlJeClub1ExowPBVtPo.1eZPjdxwtBOyTCpAcBhlAXVfUBu4BNm' WHERE  `user`.`id` =1 LIMIT 1
+

@@ -1,3 +1,10 @@
 myxhop_web_homepage:
     path:     /
     defaults: { _controller: MyxhopWebBundle:Default:index }
+
+myxhop_web_login:
+    path:     /login
+    defaults: { _controller: MyxhopWebBundle:User:login }
+
+myxhop_web_login_check:
+    path:     /login_check
