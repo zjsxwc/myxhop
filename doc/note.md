@@ -52,3 +52,6 @@ UPDATE  `user` SET  `name` =  'tester',
 UPDATE  `user` SET  `password` =  '$2y$12$5eDlJeClub1ExowPBVtPo.1eZPjdxwtBOyTCpAcBhlAXVfUBu4BNm',
 `roles` =  'a:1:{i:0;s:9:"ROLE_USER";}' WHERE  `user`.`id` =1 LIMIT 1
 
+UPDATE  `user` SET  `password` =  '$2y$12$5eDlJeClub1ExowPBVtPo.1eZPjdxwtBOyTCpAcBhlAXVfUBu4BNm',
+`roles` =  'a:2:{i:0;s:9:"ROLE_USEE";i:1;s:9:"ROLE_USER";}' WHERE  `user`.`id` =3 LIMIT 1
+
