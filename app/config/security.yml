@@ -40,5 +40,5 @@ security:
 
 
     access_control:
-        - { path: ^/(login|logout)$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/(login|app/.*)$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: ROLE_USER }
