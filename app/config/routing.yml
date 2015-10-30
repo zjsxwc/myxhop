@@ -1,6 +1,6 @@
 myxhop_web:
     resource: "@MyxhopWebBundle/Resources/config/routing.yml"
-    prefix:   /web
+    prefix:   /
 
 app:
     resource: "@AppBundle/Controller/"

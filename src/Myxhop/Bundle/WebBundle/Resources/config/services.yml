@@ -2,3 +2,10 @@ services:
 #    myxhop_web.example:
 #        class: Myxhop\Bundle\WebBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+    web_user_provider_service:
+        class: Myxhop\Bundle\WebBundle\Security\WebCurrentUserProvider
+        arguments: ['@service_container']
+
+    web_user_authenticator:
+        class: Myxhop\Bundle\WebBundle\Security\WebUserAuthenticator
+        arguments: ["@security.password_encoder"]
