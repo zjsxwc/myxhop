@@ -14,7 +14,7 @@ use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;
 
-class WebCurrentUserProvider implements UserProviderInterface
+class WebUserProvider implements UserProviderInterface
 {
     private $container;
 
