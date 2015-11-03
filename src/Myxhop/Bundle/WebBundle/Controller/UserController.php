@@ -5,7 +5,6 @@ namespace Myxhop\Bundle\WebBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
-use Symfony\Component\Security\Core\SecurityContext;
 use Symfony\Component\Security\Core\Security;
 
 class UserController extends Controller
